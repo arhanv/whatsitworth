@@ -1,5 +1,5 @@
 # What's it Worth?: Exploring the Housing Market around Chicago
-Multiple logistic regression analysis of housing prices in the Chicago metropolitan area
+Multiple regression analysis of housing prices in the Chicago metropolitan area
 
 ## Background
 This was a project I completed for my [Principles of Data Science](https://www.ds100.org) class at Berkeley as a sophomore. The dataset I used is publicly available from the website of the [Cook County Assessor's Office](https://www.cookcountyassessor.com/community-data). The overarching goal here was to develop my understanding of the feature engineering and linear modelling process by investigating the various ways in which I could incrementally improve the validation and training accuracy of a model derived from a feature-dense dataset, but also considering the loaded socioeconomic implications that arise from looking at indicators that are deeply intertwined with the concepts of red-lining, segregation, and gentrification.
@@ -29,7 +29,7 @@ There were 61 + 1 features in the training data, which is mostly redundant to in
 | + 57 more| ... | ... |
 
 ## Model Design
-The logistic regression model I ended up with through multiple rounds of k-cross-fold validation operated as follows:
+The log regression model I ended up with through multiple rounds of k-cross-fold validation operated as follows:
 
 | Feature Name (Predictor)                    | Transformations        |
 |---------------------------------|------------------------|
@@ -50,7 +50,7 @@ The logistic regression model I ended up with through multiple rounds of k-cross
 |------------|----------------|
 | $\log$ Sale Price | `log` transform |
 
-The logistic regression equation resembles the form $\log (\text{sale price}) = \alpha \cdot \text{sqft} + \beta \cdot \mathbb{I}[\text{architect}] + \gamma \cdot \frac{\text{age}}{10} + ...$
+The regression equation resembles the form $\log (\text{sale price}) = \alpha \cdot \text{sqft} + \beta \cdot \mathbb{I}[\text{architect}] + \gamma \cdot \frac{\text{age}}{10} + ...$
 
 ## Modelling Results
 
